@@ -209,7 +209,7 @@ img {
 
   .showcase-text {
     text-align: center;
-    margin-top: .8em;
+    margin-top: 0.8em;
   }
 
   .showcase-form {
@@ -235,5 +235,9 @@ img {
   .navbar ul {
     padding: 0.8em;
     background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .footer .social a i {
+    margin-top: 0.3em;
   }
 }
