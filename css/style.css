@@ -1,10 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 
 :root {
   --gray-color: #333;
   --blue-color: #047aed;
+  --dark-blue: #1c3fa8;
   --white-color: #fff;
   --light-gray-color: #b4becb;
+  --dark-color: #002240;
 }
 
 * {
@@ -15,6 +17,7 @@
 
 body {
   font-family: "Lato", sans-serif;
+  font-weight: 300;
   color: var(--gray-color);
   line-height: 1.6;
 }
@@ -77,7 +80,7 @@ img {
 }
 
 .showcase h1 {
-  font-size: 2.2em;
+  font-size: 2.2rem;
 }
 
 .showcase p {
@@ -127,54 +130,64 @@ img {
   transform: skewY(-3deg);
 }
 
-/* Utils */
-
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 2.5em;
+/* Stats */
+.stats {
+  padding-top: 110px;
 }
 
-.card {
-  background-color: var(--white-color);
-  color: var(--gray-color);
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-  padding: 1.2em;
-  margin: 0.8em;
+.stats-heading {
+  max-width: 500px;
+  margin: auto;
+  font-size: 1.4rem;
 }
 
-.btn {
-  display: inline-block;
-  padding: .8em 2em;
-  cursor: pointer;
-  background: var(--blue-color);
-  color: var(--white-color);
-  border: none;
-  border-radius: 5px;
+.stats .grid h3 {
+  font-size: 2.2rem;
 }
 
-.btn-outlined {
-  background-color: transparent;
-  border: 1px var(--white-color) solid; 
+.stats .grid p {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
-.btn:hover {
-  transform: scale(.98);
+/* Cli */
+.cli .grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
 
-.flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+.cli .grid > *:first-child {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5em;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+/* Cloud */
+.cloud .grid {
+  grid-template-columns: 4fr 3fr;
+}
+
+/* Languages */
+
+.languages .flex {
+  flex-wrap: wrap;
+}
+
+.languages .card {
+  text-align: center;
+  margin: 1.1em .7em 2.5em;
+  transition: transform 0.2s ease-in;
+}
+
+.languages .card h4 {
+  font-size: 1.4rem;
+  margin-bottom: .8em;
+}
+
+.languages .card:hover {
+  transform: translateY(-15px);
+}
+
+/* Footer */
+.footer .social a {
+  margin: 0 .8em;
 }
