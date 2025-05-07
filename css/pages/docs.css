@@ -1,0 +1,42 @@
+.docs-head img {
+  width: 200px;
+  justify-self: flex-end;
+}
+
+.docs-main h3 {
+  margin: 1.2em 0;
+}
+
+.docs-main .grid {
+  grid-template-columns: 1fr 2fr;
+  align-items: flex-start;
+}
+
+.docs-main nav li {
+  font-size: 1.1rem;
+  padding-bottom: .3em;
+  margin-bottom: .3em;
+  border-bottom: 1px #9b9b9b solid;
+}
+
+.docs-main nav li a:hover {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 500px) {
+  .docs-head {
+    text-align: center;
+  }
+  
+  .docs-head .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .docs-head img {
+    justify-self: center;
+  }
+
+  .docs-main .grid {
+    grid-template-columns: 1fr;
+  }
+}
