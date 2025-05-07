@@ -100,6 +100,10 @@ code, pre {
   gap: 2em;
 }
 
+.showcase-text {
+  animation: slideInFromLeft 0.3s ease-in;
+}
+
 .showcase-form {
   position: relative;
   top: 60px;
@@ -108,6 +112,7 @@ code, pre {
   padding: 2.5em;
   z-index: 100;
   justify-self: flex-end;
+  animation: slideInFromRight 0.4s ease-in;
 }
 
 .showcase-form .form-control {
@@ -147,6 +152,10 @@ code, pre {
   max-width: 500px;
   margin: auto;
   font-size: 1.4rem;
+}
+
+.stats .grid {
+  animation: slideInFromBottom 0.3s ease-in;
 }
 
 .stats .grid h3 {
@@ -200,6 +209,47 @@ code, pre {
   margin: 0 0.8em;
 }
 
+/* Animations */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 /* Tablets and Under */
 @media screen and (max-width: 915px) {
   .grid,
@@ -218,10 +268,12 @@ code, pre {
   .showcase-text {
     text-align: center;
     margin-top: 0.8em;
+    animation: slideInFromTop 0.4s ease-in;
   }
 
   .showcase-form {
     justify-self: center;
+    animation: slideInFromBottom 0.4s ease-in;
   }
 
   .cli .grid > *:first-child {
